@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="css/order.css">
+<link rel="stylesheet" href="css/success.css">
+<nav class="navbar" ng-cloak>
+    <div class="container-fluid">
+        <div class="navbar-logo">
+            <img src="assets/logo/feedme_logo.svg">
+        </div>
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">feed.me</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav pull-right">
+                <li id="success" class="steps" ui-sref="main">ORDER SENT</li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="dialog">
+            <h2>Thank you for your order, {{name | capitalize}}!</h2>
+            <h4>Order is on the way</h4>
+        </div>
+    </div>
+    <button class="main-red-btn center-block" ui-sref="main"><span class="call_to_action">Close</span></button>
+</div>
+

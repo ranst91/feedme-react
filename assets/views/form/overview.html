@@ -1,0 +1,31 @@
+<div class="details">
+    <div class="headers">
+        <h1>Everything correct?</h1>
+        <h4>Your order</h4>
+        <table class="col-xs-8 col-xs-offset-2">
+            <tr>
+                <td class="cat left-col">Steinoffen-Pizza</td><td class="cat">Pizza size</td>
+            </tr>
+            <tr>
+                <td class="left-col">X1</td><td>{{order.size}}</td>
+            </tr>
+            <tr>
+                <td class="cat left-col">Ingredients</td><td class="cat">Cheese rand</td>
+            </tr>
+            <tr>
+                <td class="left-col topping">{{selectedToppings}}</td><td>{{order.cheese_rand}}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="address_details col-xs-12">
+        <h4>Devliery Address:</h4>
+        <p>{{order.first | capitalize}} {{order.last | capitalize}}</p>
+        <p>{{order.street | capitalize}} {{order.no}}</p>
+        <p>{{order.postcode}} {{order.city | capitalize}}</p>
+    </div>
+</div>
+<div class="form_end col-xs-12">
+    <span id="back" class="col-xs-2 back" ui-sref="order.address">Back</span>
+    <button class="main-red-btn center-block" ng-click="submit()"><span class="call_to_action">Make Order</span></button>
+</div>
+
