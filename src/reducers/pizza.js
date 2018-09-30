@@ -12,18 +12,20 @@ const {
 const pizzaReducer = (state = {}, action) => {
   switch (action.type) {
     case SET_SIZE:
-      return state;
+      return Object.assign({}, state, { size: action.size });
     case SET_CHEESE_RAND:
-      return state;
+      return Object.assign({}, state, { cheeseRand: action.cheeseRand });
     case ADD_TOPPING:
-      return state;
-    case REMOVE_TOPPING:
-      return state;
+      return Object.assign({}, state, { toppings: [ ...state.toppings, action.topping ] });
+      case REMOVE_TOPPING:
+      return Object.assign({}, state, { toppings: [ ...state.toppings.filter(topping => topping !== action.topping) ] });
     case RESET_PIZZA:
-      return state;
+      return {};
     case SUBMIT_PIZZA:
       return state;
     default:
       return state;
   }
 };
+
+export default pizzaReducer;
