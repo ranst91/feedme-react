@@ -12,6 +12,9 @@ import rootReducer from "./reducers";
 import { createStore, applyMiddleware } from 'redux';
 import { createLogger } from 'redux-logger';
 import './index.css';
+import {Route, Switch} from "react-router-dom";
+import Home from "./components/Home";
+import Order from "./components/Order";
 
 const loggerMiddleware = createLogger();
 
@@ -33,7 +36,8 @@ ReactDOM.render(
   <Provider store={store}>
     { /* Tell the Router to use our enhanced history */ }
     <Router history={history}>
-      {routes}
+      <Route path="/" component={Home} />
+      <Route path="/order" component={Order} />
     </Router>
   </Provider>, document.getElementById('root'));
 registerServiceWorker();
