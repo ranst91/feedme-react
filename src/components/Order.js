@@ -1,14 +1,14 @@
-import React from "react";
+import React, {Component} from "react";
 
-import Pizza from './steps/Pizza';
+// import Pizza from './steps/Pizza';
 
-export default class Order {
-  get step() {
-    return 'Pizza';
-  }
+export default class Order extends Component {
+  // get step() {
+  //   return 'Pizza';
+  // }
 
   render() {
-    const Step = this.step;
+    // const Step = this.step;
     return (
       <div>This is the order page</div>
     );
